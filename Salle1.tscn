@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://d4f6gih4igvtw"]
+
+[sub_resource type="Environment" id="Environment_sgdyr"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.59000003, 1, 0.8769999, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.48
+reflected_light_source = 2
+ssil_enabled = true
+ssil_radius = 3.85
+ssil_sharpness = 1.0
+sdfgi_min_cell_size = 5.60332
+sdfgi_y_scale = 2
+glow_enabled = true
+fog_sky_affect = 0.0
+volumetric_fog_ambient_inject = 1.0
+volumetric_fog_sky_affect = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_lvuf6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ob0hs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sgdyr"]
+
+[node name="Main S1" type="Node3D" unique_id=1071023324]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=804359057]
+environment = SubResource("Environment_sgdyr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1496633606]
+transform = Transform3D(0.86968446, -0.42747724, 0.24680409, 2.9047564e-10, 0.5, 0.86602557, -0.49360824, -0.7531689, 0.43484226, 6.8105183, 9, 2.6512775)
+light_color = Color(1, 0.992, 0.96, 1)
+light_energy = 1.739
+light_volumetric_fog_energy = 3.292
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1858311153]
+transform = Transform3D(0.5000002, -0.43301266, 0.74999994, 8.0456076e-08, 0.8660254, 0.5, -0.8660253, -0.25, 0.43301287, 6, 4.2574205, 6.009994)
+projection = 1
+size = 10.0
+near = 0.001
+far = 241.89
+
+[node name="Room walls" type="Node3D" parent="." unique_id=1515551969]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room walls" unique_id=1928329417]
+transform = Transform3D(6, 0, 0, 0, 0.5, 0, 0, 0, 9, 2.5, 0, 4.5)
+mesh = SubResource("BoxMesh_lvuf6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Room walls" unique_id=201869248]
+transform = Transform3D(0.5, 0, 0, 0, 4, 0, 0, 0, 8.5, -0.25, 2.25, 4.75)
+mesh = SubResource("BoxMesh_ob0hs")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Room walls" unique_id=815716436]
+transform = Transform3D(-2.1855694e-08, 0, -6, 0, 4, 0, 0.5, 0, -2.6226832e-07, 2.5, 2.25, 0.25)
+mesh = SubResource("BoxMesh_sgdyr")
+
+[node name="Mainspot" type="SpotLight3D" parent="." unique_id=481475091]
+transform = Transform3D(0.846227, 0.51935375, 0.1190447, -0.21979432, 0.13672471, 0.9659176, 0.4853766, -0.84355086, 0.22985111, 3.593001, 8.408964, 6.4942603)
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_energy = 0.522
+light_bake_mode = 1
+spot_range = 23.784
+spot_attenuation = 0.13
+spot_angle = 38.55
+spot_angle_attenuation = 2.219139
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1174304023]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8250217, 8.408964, 7.4942603)
+visible = false
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_bake_mode = 1
+spot_range = 11.281
+spot_attenuation = 0.0
+spot_angle = 11.34
+spot_angle_attenuation = 0.90125227
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=199269826]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.9150572, 8.408964, 7.4942603)
+visible = false
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_bake_mode = 1
+spot_range = 11.281
+spot_attenuation = 0.0
+spot_angle = 11.34
+spot_angle_attenuation = 0.90125227
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=665798786]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8250217, 8.408964, 4.4942603)
+visible = false
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_bake_mode = 1
+spot_range = 11.281
+spot_attenuation = 0.0
+spot_angle = 11.34
+spot_angle_attenuation = 0.90125227
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=308809624]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.9150572, 8.408964, 4.4942603)
+visible = false
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_bake_mode = 1
+spot_range = 11.281
+spot_attenuation = 0.0
+spot_angle = 11.34
+spot_angle_attenuation = 0.90125227
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=934050813]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8250217, 8.408964, 1.4942603)
+visible = false
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_bake_mode = 1
+spot_range = 11.281
+spot_attenuation = 0.0
+spot_angle = 11.34
+spot_angle_attenuation = 0.90125227
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=440777111]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.9150572, 8.408964, 1.4942603)
+visible = false
+light_color = Color(0.92, 0.9853333, 1, 1)
+light_bake_mode = 1
+spot_range = 11.281
+spot_attenuation = 0.0
+spot_angle = 11.34
+spot_angle_attenuation = 0.90125227
